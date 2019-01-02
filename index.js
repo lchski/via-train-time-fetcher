@@ -8,7 +8,12 @@ exports.getArrivalDataForDay = (req, res) => {
         res.status(200).send(viaResponse);
     };
 
-    http.get(`http://reservia.viarail.ca/tsi/GetTrainStatus.aspx?l=en&TsiCCode=VIA&TsiTrainNumber=${req.body.trainNumber}&DepartureDate=${req.body.tripDate}&ArrivalDate=${req.body.tripDate}&TrainInstanceDate=${req.body.tripDate}`, (viaRes) => {
+    http.get({
+        host: 'reservia.viarail.ca',
+        port: 80,
+        path: `/tsi/GetTrainStatus.aspx?l=en&TsiCCode=VIA&TsiTrainNumber=${req.body.trainNumber}&DepartureDate=${req.body.tripDate}&ArrivalDate=${req.body.tripDate}&TrainInstanceDate=${req.body.tripDate}`,
+        agent: agent
+    }, (viaRes) => {
         const statusCode = viaRes.statusCode;
         const contentType = viaRes.headers['content-type'];
 
