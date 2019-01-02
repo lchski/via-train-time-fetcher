@@ -1,0 +1,15 @@
+{
+  "name": "via-train-time-fetcher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lchski/via-train-time-fetcher.git"
+  },
+  "author": "Lucas Cherkewski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lchski/via-train-time-fetcher/issues"
+  },
+  "homepage": "https://github.com/lchski/via-train-time-fetcher#readme"
+}
