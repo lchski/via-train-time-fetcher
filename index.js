@@ -7,13 +7,14 @@ exports.getArrivalDataForDay = async (req, res) => {
 
     console.log(req.body.trainNumber);
     console.log(req.body.tripDate);
-    console.log(viaResult);
+
+    const responseBody = await viaResult.text();
 
     const resJson = {
         status: viaResult.status,
         statusText: viaResult.statusText,
         url: viaResult.url,
-        body: viaResult.text()
+        body: responseBody
     };
 
     res.json(resJson);
