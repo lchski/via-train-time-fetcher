@@ -11,5 +11,8 @@
   "bugs": {
     "url": "https://github.com/lchski/via-train-time-fetcher/issues"
   },
-  "homepage": "https://github.com/lchski/via-train-time-fetcher#readme"
+  "homepage": "https://github.com/lchski/via-train-time-fetcher#readme",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
 }
